@@ -8,12 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Sterk Onderwijs</h1>
-        <p>Leren voor een sterke toekomst!</p>
+        <img src="img/Logo.png" alt="Sterk Onderwijs Logo" class="logo">
+        <p class="slogan">Leren voor een sterke toekomst!</p>
         <nav>
             <a href="#over-ons">Over Ons</a>
             <a href="#programma">Programma</a>
             <a href="#standpunten">Standpunten</a>
+            <a href="#nieuws">Nieuws</a>
+            <a href="#kalender">Kalender</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -63,19 +65,42 @@
             </div>
         </div>
     </section>
+
+    <section id="nieuws">
+        <h2>Nieuws en Updates</h2>
+        <article>
+            <h3>Nieuwe subsidie voor laptops goedgekeurd</h3>
+            <p>Vanaf volgend jaar ontvangen meer leerlingen gratis laptops. Dit is een belangrijke mijlpaal!</p>
+        </article>
+        <article>
+            <h3>Debat over kleinere klassen</h3>
+            <p>Komende week organiseert Sterk Onderwijs een debat over het werven van meer leraren.</p>
+        </article>
+    </section>
+
+    <section id="kalender">
+        <h2>Evenementenkalender</h2>
+        <ul>
+            <li>15 januari 2025 - Debatavond in Rotterdam</li>
+            <li>20 februari 2025 - Open dag voor nieuwe leden</li>
+            <li>5 maart 2025 - Workshop onderwijsinnovatie</li>
+        </ul>
+    </section>
  
     <section id="contact">
-        <h2>Heeft u vragen. Neem gerust contact met ons op</h2>
+        <h2>Heeft u vragen? Neem gerust contact met ons op</h2>
         <form>
             <label for="name">Naam:</label>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" required>
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
             <label for="message">Bericht:</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea id="message" name="message" required></textarea>
             <button type="submit">Verstuur</button>
         </form>
     </section>
 </body>
 </html>
+
+
  
