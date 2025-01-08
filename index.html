@@ -3,104 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sterk Onderwijs - Leren voor een sterke toekomst!">
     <title>Sterk Onderwijs</title>
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
     <header>
-        <img src="img/Logo.png" alt="Sterk Onderwijs Logo" class="logo">
-        <p class="slogan">Leren voor een sterke toekomst!</p>
-        <nav>
-            <a href="#over-ons">Over Ons</a>
-            <a href="#programma">Programma</a>
-            <a href="#standpunten">Standpunten</a>
-            <a href="#nieuws">Nieuws</a>
-            <a href="#kalender">Kalender</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="header-container">
+            <a href="#home">
+                <img src="img/Logo.png" alt="Sterk Onderwijs Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#over-ons">Over Ons</a></li>
+                    <li><a href="#programma">Programma</a></li>
+                    <li><a href="#standpunten">Standpunten</a></li>
+                    <li><a href="#nieuws">Nieuws</a></li>
+                    <li><a href="#kalender">Kalender</a></li>
+                    <li><a href="#team">Ons Team</a></li>
+                    <li><a href="#testimonials">Ervaringen</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
- 
-    <section id="over-ons">
-        <h2>Onze Missie en Visie</h2>
-        <p>Onze missie is om iedereen toegang te geven tot hoogwaardig onderwijs.</p>
-        <p>Onze visie is een samenleving waarin onderwijs voorbereidt op een sterk leven.</p>
-    </section>
- 
-    <section id="programma">
-        <h2>Ons Programma</h2>
-        <ul>
-            <li>Meer leraren aannemen voor kleinere klassen.</li>
-            <li>Praktische levensvaardigheden zoals omgaan met geld.</li>
-            <li>Gratis laptops en boeken voor leerlingen in een moeilijke situatie.</li>
-        </ul>
-    </section>
- 
-    <section id="standpunten">
-        <h2>Onze Stelling</h2>
-        <p>Elke leerling moet belangrijke vaardigheden leren, zoals omgaan met geld en technologie.</p>
+
+    
+    <main>
         
-        <div class="argumenten">
-            <div class="voor">
-                <h3>Voor argumenten</h3>
-                <ul>
-                    <li>Leerlingen leren omgaan met geld.</li>
-                    <li>Bereidt leerlingen voor op hun toekomst.</li>
-                    <li>Helpt leerlingen zelfstandig te worden.</li>
-                    <li>Leerlingen krijgen gelijke kansen, ongeacht hun achtergrond.</li>
-                    <li>Helpt bij het ontwikkelen van essentiële vaardigheden voor werk en maatschappij.</li>
-                    <li>Maakt school relevanter voor het echte leven.</li>
-                </ul>
+        <section id="home" class="section-intro">
+            <div class="overlay">
+                <h1>Welkom bij Sterk Onderwijs</h1>
+                <p>Wij geloven in leren voor een sterke toekomst. Ontdek onze missie, programma’s en meer.</p>
+                <button class="btn-primary" onclick="toggleReadMore()">Lees Meer</button>
             </div>
- 
-            <div class="tegen">
-                <h3>Tegen argumenten</h3>
-                <ul>
-                    <li>Niet alle vaardigheden zijn voor elke leerling even noodzakelijk.</li>
-                    <li>Er is te weinig tijd in het schooljaar om dit grondig aan te leren.</li>
-                    <li>Ouders kunnen bepaalde vaardigheden ook thuis aanleren.</li>
-                    <li>Het kan voor sommige leerlingen stressvol zijn om deze extra vaardigheden te leren.</li>
-                    <li>Scholen hebben mogelijk niet voldoende middelen om dit effectief te onderwijzen.</li>
-                    <li>Er moeten extra kosten worden gemaakt voor de opleiding van leraren in deze vakken.</li>
-                </ul>
+            <div id="read-more-content" class="hidden read-more-area">
+                <h2>Meer Over Sterk Onderwijs</h2>
+                <p>
+                    Sterk Onderwijs is opgericht met de visie om hoogwaardig onderwijs toegankelijk te maken voor iedereen.
+                    Wij streven naar kleinere klassen, meer praktische vaardigheden in het curriculum, 
+                    en gelijke kansen voor alle leerlingen.
+                </p>
+                <p>
+                    Onze initiatieven omvatten het aanbieden van gratis laptops aan leerlingen in nood, 
+                    het organiseren van workshops voor docenten, 
+                    en het creëren van interactieve leermethoden die aansluiten bij de huidige technologische ontwikkelingen.
+                </p>
+                <button class="btn-secondary" onclick="toggleReadMore()">Lees Minder</button>
+            </div>
+        </section>
+
+        
+        <section id="over-ons" class="section-padding">
+            <h2>Over Ons</h2>
+            <p>
+                Onze missie is om iedereen toegang te geven tot hoogwaardig onderwijs. 
+                Onze visie is een samenleving waarin onderwijs voorbereidt op een sterk leven.
+            </p>
+            <div class="about-grid">
+                <div class="card">
+                    <img src="img/about1.jpg" alt="Klaslokaal" />
+                    <h3>Hoogwaardige Kwaliteit</h3>
+                    <p>
+                        Wij streven ernaar om continu de beste methodes en materialen te bieden, 
+                        zodat onze leerlingen optimaal kunnen presteren.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="img/about2.lpg.png" alt="Teamwork" />
+                    <h3>Samen Leren</h3>
+                    <p>
+                        Door samenwerking tussen leerlingen, docenten en ouders 
+                        creëren we een sterke en ondersteunende leeromgeving.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="programma" class="section-padding">
+            <h2>Ons Programma</h2>
+            <ul class="list-program">
+                <li>Meer leraren aannemen voor kleinere klassen.</li>
+                <li>Praktische levensvaardigheden zoals omgaan met geld.</li>
+                <li>Gratis laptops en boeken voor leerlingen in moeilijke situaties.</li>
+                <li>Persoonlijke begeleiding voor elke leerling.</li>
+            </ul>
+        </section>
+
+        
+        <section id="standpunten" class="section-padding">
+            <h2>Onze Standpunten</h2>
+            <div class="argumenten">
+                <div class="voor">
+                    <h3>Voor Argumenten</h3>
+                    <ul>
+                        <li>Leerlingen leren omgaan met geld.</li>
+                        <li>Bereidt leerlingen voor op hun toekomst.</li>
+                        <li>Helpt leerlingen zelfstandig te worden.</li>
+                    </ul>
+                </div>
+                <div class="tegen">
+                    <h3>Tegen Argumenten</h3>
+                    <ul>
+                        <li>Niet alle vaardigheden zijn even noodzakelijk.</li>
+                        <li>Er is te weinig tijd in het schooljaar.</li>
+                        <li>Ouders kunnen dit thuis aanleren.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="nieuws" class="section-padding">
+            <h2>Nieuws</h2>
+            <div class="news-container">
+                <article class="news-item">
+                    <img src="img/news1.jpg" alt="Laptop nieuws" />
+                    <div>
+                        <h3>Nieuwe laptops voor meer leerlingen</h3>
+                        <p>
+                            Volgend jaar krijgen meer leerlingen gratis laptops. 
+                            Dit is een grote stap voor ons onderwijs!
+                        </p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <img src="img/news2.jpg" alt="Debat evenement" />
+                    <div>
+                        <h3>Debat over kleinere klassen</h3>
+                        <p>
+                            Volgende week organiseert Sterk Onderwijs een debat 
+                            over het aannemen van meer leraren.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+        <section id="kalender" class="section-padding">
+            <h2>Kalender</h2>
+            <ul>
+                <li>25 januari 2025 - Debatavond in Rotterdam</li>
+                <li>20 februari 2025 - Open dag voor nieuwe leden</li>
+                <li>10 maart 2025 - Workshop over onderwijs</li>
+            </ul>
+        </section>
+
+        
+        <section id="team" class="section-padding">
+            <h2>Ons Team</h2>
+            <p>
+                Wij zijn een gedreven groep van onderwijsspecialisten, beleidsmakers en vrijwilligers.
+            </p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/team-member.png" alt="Teamlid 1" />
+                    <h3>Darvan Suleiman</h3>
+                </div>
+                <div class="team-member">
+                    <img src="img/team-member.png" alt="Teamlid 2" />
+                    <h3>Mohammed Hmydou</h3>
+                    
+                </div>
+                <div class="team-member">
+                    <img src="img/team-member.png" alt="Teamlid 3" />
+                    <h3>Ayad Harwan</h3>
+                </div>
+                <div class="team-member">
+                    <img src="img/team-member.png" alt="Teamlid 4" />
+                    <h3>Hasan Haj Taha</h3>
+            </div>
+        </section>
+
+       
+        <section id="testimonials" class="section-padding">
+            <h2>Ervaringen</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <blockquote>
+                        “Dankzij Sterk Onderwijs kon ik mijn klas beter begeleiden en inspelen op individuele behoeften!”
+                    </blockquote>
+                    <p class="author">- Mevrouw de Vries, Docent</p>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        “De gratis laptop heeft me echt geholpen bij mijn schoolwerk, nu kan ik beter meedoen!”
+                    </blockquote>
+                    <p class="author">- Sam, Leerling</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq" class="section-padding">
+            <h2>Veelgestelde Vragen</h2>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ('faq1')">
+                    <span>Wie komt in aanmerking voor een gratis laptop?</span>
+                </button>
+                <div class="faq-answer hidden" id="faq1">
+                    <p>Leerlingen die voldoen aan onze criteria voor financiële ondersteuning kunnen een gratis laptop ontvangen.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ('faq2')">
+                    <span>Hoe kan ik me aanmelden voor een debatavond?</span>
+                </button>
+                <div class="faq-answer hidden" id="faq2">
+                    <p>
+                        U kunt zich aanmelden via onze contactpagina of door een mail te sturen naar info@sterkonderwijs.nl.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ('faq3')">
+                    <span>Kan ik ook vrijwilliger worden?</span>
+                </button>
+                <div class="faq-answer hidden" id="faq3">
+                    <p>
+                        Zeker! Stuur ons een bericht met uw interesses en beschikbaarheid. Wij nemen zo snel mogelijk contact op.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-padding">
+            <h2>Contact</h2>
+            <p>Heeft u vragen of wilt u meer informatie? Vul dan ons contactformulier in:</p>
+            <form>
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" placeholder="Uw naam" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
+
+                <label for="message">Bericht:</label>
+                <textarea id="message" name="message" placeholder="Uw bericht" required></textarea>
+
+                <button type="submit" class="btn-primary">Verstuur</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Sterk Onderwijs. Alle rechten voorbehouden.</p>
+            <div class="socials">
+                <a href="#" aria-label="Facebook">
+                    <img src="img/facebook.png" alt="Facebook icon">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="img/twitter.png" alt="Twitter icon">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="img/instagram.png" alt="Instagram icon">
+                </a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="nieuws">
-        <h2>Nieuws en Updates</h2>
-        <article>
-            <h3>Nieuwe laptops voor meer leerlingen</h3>
-            <p>Volgend jaar krijgen meer leerlingen gratis laptops. Dit is een grote stap voor ons onderwijs!</p>
-        </article>
-        <article>
-            <h3>Debat over kleinere klassen</h3>
-            <p>Volgende week organiseert Sterk Onderwijs een debat over het aannemen van meer leraren.</p>
-        </article>
-    </section>
+    <!-- SCRIPTS -->
+    <script>
+        // Read More / Read Less Toggle
+        function toggleReadMore() {
+            const readMoreContent = document.getElementById('read-more-content');
+            readMoreContent.classList.toggle('hidden');
+        }
 
-    <section id="kalender">
-        <h2>Evenementenkalender</h2>
-        <ul>
-            <li>25 januari 2025 - Debatavond in Rotterdam</li>
-            <li>20 februari 2025 - Open dag voor nieuwe leden</li>
-            <li>10 maart 2025 - Workshop over onderwijs</li>
-        </ul>
-    </section>
- 
-    <section id="contact">
-        <h2>Heeft u vragen? Neem gerust contact met ons op</h2>
-        <form>
-            <label for="name">Naam:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Bericht:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Verstuur</button>
-        </form>
-    </section>
+        // FAQ Accordion
+        function toggleFAQ(id) {
+            const answer = document.getElementById(id);
+            answer.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
-
-
- 
