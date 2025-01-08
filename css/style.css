@@ -1,55 +1,89 @@
-
+/* =======================
+   1. GLOBAL RESET & BASIC STYLES
+======================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.5;
     background-color: #f9f9f9;
     color: #333;
 }
 
+/* Utility class to hide elements via JS */
+.hidden {
+    display: none !important;
+}
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
+/* =======================
+   2. HEADER & NAVIGATION
+======================= */
+header {
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.header-container .logo {
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
     max-height: 60px;
 }
 
-.header-container nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
 }
 
-.header-container nav ul li a {
+header nav ul li a {
     text-decoration: none;
     font-weight: 500;
     color: #333;
     transition: color 0.3s ease;
 }
 
-.header-container nav ul li a:hover {
-    color: #3c6e99; 
+header nav ul li a:hover {
+    color: #3c6e99;
 }
 
+/* Responsive nav - stack on small devices */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
+/* =======================
+   3. HERO / INTRO SECTION
+======================= */
 .section-intro {
     position: relative;
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Example background:
+       Replace with your own image or remove if using inline <img> */
     background: url('img/hero.jpg') center / cover no-repeat;
 }
 
@@ -72,8 +106,21 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* 4. Buttons */
-.btn-primary, .btn-secondary {
+/* Read-more area below hero text */
+.read-more-area {
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   4. BUTTON STYLES
+======================= */
+.btn-primary,
+.btn-secondary {
     padding: 0.75rem 1.5rem;
     border: none;
     font-size: 1rem;
@@ -81,6 +128,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Primary Button */
 .btn-primary {
     background-color: #3c6e99;
     color: #fff;
@@ -91,6 +139,7 @@ body {
     background-color: #2f5477;
 }
 
+/* Secondary Button */
 .btn-secondary {
     background-color: #fff;
     color: #3c6e99;
@@ -103,14 +152,17 @@ body {
     color: #fff;
 }
 
-
+/* =======================
+   5. GENERAL SECTION STYLES
+======================= */
 .section-padding {
     padding: 3rem 2rem;
     background-color: #f9f9f9;
 }
 
+/* Alternate background for consecutive sections */
 .section-padding:nth-child(even) {
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 h2 {
@@ -119,23 +171,21 @@ h2 {
     text-align: center;
 }
 
+p {
+    margin-bottom: 1rem;
+}
 
-.about-grid, .team-grid {
+/* =======================
+   6. OVER ONS / ABOUT US
+======================= */
+.about-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.about-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    align-items: start;
-}
-
-.card, .team-member {
+.card {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -143,28 +193,104 @@ h2 {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card img, .team-member img {
+.card img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.card h3, .team-member h3 {
+.card h3 {
     margin: 1rem 0;
 }
 
-.card p, .team-member p {
+.card p {
     padding: 0 1rem 1rem;
 }
 
-
+/* =======================
+   7. PROGRAMMA
+======================= */
 .list-program {
     list-style: inside square;
     margin-top: 1rem;
     line-height: 1.7;
+    color: #333;
 }
 
+/* =======================
+   8. STANDPUNTEN (VOOR/TEGEN)
+   Inspired by your screenshot
+======================= */
+.stelling {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    text-align: center;
+}
 
+.stelling h2 {
+    color: #0072C6;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.stelling p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Two-column row for argument blocks */
+.argumenten-row {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Base block style */
+.argumenten-blok {
+    flex: 1 1 45%;
+    background-color: #e8f5fe;
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.argumenten-blok h3 {
+    color: #0072C6;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.argumenten-blok ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Slight variations for Voor/Tegen if desired */
+.argumenten-voor {
+    background-color: #e0f2fe;
+}
+
+.argumenten-tegen {
+    background-color: #ecf7ff;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+    .argumenten-row {
+        flex-direction: column;
+    }
+}
+
+/* =======================
+   9. NIEUWS SECTION
+======================= */
 .news-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -190,10 +316,61 @@ h2 {
 }
 
 .news-item h3 {
-    margin: 0 0 0.5rem 0;
+    margin-bottom: 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr; /* stack articles */
+    }
+}
 
+/* =======================
+   10. KALENDER
+======================= */
+#kalender ul {
+    list-style: disc inside;
+    margin-top: 1rem;
+    line-height: 1.7;
+}
+
+/* =======================
+   11. TEAM SECTION
+======================= */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-member h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.team-member p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* =======================
+   12. TESTIMONIALS
+======================= */
 .testimonials-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -219,7 +396,15 @@ h2 {
     color: #3c6e99;
 }
 
+@media (max-width: 768px) {
+    .testimonials-container {
+        grid-template-columns: 1fr; /* stack on mobile */
+    }
+}
 
+/* =======================
+   13. FAQ SECTION
+======================= */
 .faq-item {
     margin-bottom: 1rem;
 }
@@ -251,7 +436,9 @@ h2 {
     display: none;
 }
 
-
+/* =======================
+   14. CONTACT FORM
+======================= */
 form {
     max-width: 600px;
     margin: 2rem auto;
@@ -270,13 +457,16 @@ form textarea {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
 }
 
 form button {
     align-self: flex-start;
 }
 
-
+/* =======================
+   15. FOOTER
+======================= */
 footer {
     background-color: #333;
     color: #fff;
@@ -284,31 +474,24 @@ footer {
 }
 
 .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-container .socials a {
+.footer-container p {
+    margin-bottom: 1rem;
+}
+
+.socials a {
     margin-left: 1rem;
 }
 
-.footer-container .socials img {
+.socials img {
     width: 24px;
     height: 24px;
     filter: invert(100%);
-}
-
-
-.hidden {
-    display: none;
-}
-.read-more-area {
-    margin-top: 1rem;
-    padding: 2rem;
-    background-color: #ffffff;
-    color: #333;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
